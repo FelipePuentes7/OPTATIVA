@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heladería Deliciosa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="productos.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="navbar-content">
+                <div class="nav-links left-links">
+                    <a href="#">Inicio</a>
+                    <a href="#">Nosotros</a>
+                </div>
+                <div class="site-logo">
+                    <img src="logo.png" alt="Rainbow Ice Cream Logo">
+                </div>
+                <div class="nav-links right-links">
+                    <a href="#">Productos</a>
+                    <a href="#">Contactanos</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="products-section">
+        <h1>Nuestros Productos</h1>
+
+        <div class="product-categories">
+
+            <div class="category-card">
+                <img src="canasta.png" alt="Conos y Canastas">
+                <h2>Conos y Canastas</h2>
+                <p>Disfruta de nuestros helados en crujientes conos o deliciosas canastas comestibles.</p>
+                <a href="#" class="details-link show-products-modal" data-bs-toggle="modal" data-bs-target="#productsModal" data-category="conos">
+                     <span class="arrow">→</span>
+                </a>
+            </div>
+
+            <div class="category-card">
+                <img src="img/ensalada_frutas.png" alt="Ensaladas de Frutas y Más">
+                <h2>Ensaladas de Frutas, Canastas y Más</h2>
+                <p>Frescas ensaladas de frutas, combinaciones especiales y postres frutales.</p>
+                 <a href="#" class="details-link show-products-modal" data-bs-toggle="modal" data-bs-target="#productsModal" data-category="frutas">
+                     <span class="arrow">→</span>
+                </a>
+            </div>
+
+            <div class="category-card">
+                <img src="img/copas.png" alt="Copas de Helado">
+                <h2>Copas Especiales</h2>
+                <p>Nuestras creaciones únicas servidas en elegantes copas.</p>
+                 <a href="#" class="details-link show-products-modal" data-bs-toggle="modal" data-bs-target="#productsModal" data-category="copas">
+                     <span class="arrow">→</span>
+                </a>
+            </div>
+
+             <div class="category-card">
+                 <img src="img/malteadas.png" alt="Malteadas">
+                <h2>Malteadas</h2>
+                <p>Deliciosos batidos de helado con tus sabores y toppings favoritos.</p>
+                 <a href="#" class="details-link show-products-modal" data-bs-toggle="modal" data-bs-target="#productsModal" data-category="malteadas">
+                     <span class="arrow">→</span>
+                </a>
+            </div>
+
+             <div class="category-card">
+                 <img src="img/kids.png" alt="Productos para Niños">
+                <h2>Para los Más Pequeños (Kids)</h2>
+                <p>Opciones divertidas y deliciosas diseñadas especialmente para niños.</p>
+                 <a href="#" class="details-link show-products-modal" data-bs-toggle="modal" data-bs-target="#productsModal" data-category="kids">
+                     <span class="arrow">→</span>
+                </a>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <div class="modal fade" id="productsModal" tabindex="-1" aria-labelledby="productsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productsModalLabel">Productos de la Categoría</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="product-list-container">
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="prodcutos.js"></script> 
+</body>
+</html>
