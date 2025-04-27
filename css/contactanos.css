@@ -1,0 +1,584 @@
+/* Estilos generales */
+body {
+    font-family: 'Grandstander', cursive, sans-serif;
+    margin: 0;
+    background-color: #FFE4E4;
+    padding-top: 140px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fondo animado con burbujas */
+.bubbles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    background: rgba(250, 6, 124, 0.1);
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: rise 15s infinite ease-in;
+}
+
+.bubble:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    animation-duration: 8s;
+}
+
+.bubble:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    left: 20%;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(3) {
+    width: 30px;
+    height: 30px;
+    left: 35%;
+    animation-duration: 10s;
+    animation-delay: 1s;
+}
+
+.bubble:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    animation-duration: 15s;
+    animation-delay: 3s;
+}
+
+.bubble:nth-child(5) {
+    width: 25px;
+    height: 25px;
+    left: 80%;
+    animation-duration: 11s;
+    animation-delay: 0s;
+}
+
+@keyframes rise {
+    0% {
+        bottom: -100px;
+        transform: translateX(0) rotate(0deg);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateX(100px) rotate(180deg);
+    }
+    100% {
+        bottom: 1080px;
+        transform: translateX(-200px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Botón de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-icon {
+    margin-top: 5px;
+}
+
+/* Header y navegación */
+.site-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: transparent;
+}
+
+.cloud-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #FBF9F3;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+.navbar {
+    background-color: #FBF9F3;
+    border-radius: 50px;
+    padding: 10px 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 850px;
+    width: 90%;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.navbar:hover {
+    transform: translateY(-3px);
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #FA067C;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.nav-links a:hover {
+    color: #FBF9F3;
+    background-color: #FA067C;
+}
+
+.site-logo {
+    margin: 0 30px;
+    position: relative;
+}
+
+.logo-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(250,6,124,0.3) 0%, rgba(250,6,124,0) 70%);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.3; }
+    100% { transform: scale(1); opacity: 0.5; }
+}
+
+.site-logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #FA067C;
+    display: block;
+    position: relative;
+    z-index: 2;
+    background-color: #FBF9F3;
+}
+
+/* Estructura principal mejorada */
+.contact-main {
+    padding: 40px 0;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Títulos mejorados */
+.contact-title {
+    color: #FA067C;
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    padding-top: 30px;
+}
+
+.contact-subtitle {
+    color: #666;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 500;
+}
+
+.section-title {
+    color: #FA067C;
+    font-size: 2.5em;
+    margin: 60px 0 30px;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    border-radius: 3px;
+}
+
+/* Contenedores mejorados */
+.contact-section {
+    margin-bottom: 60px;
+}
+
+.contact-form-container {
+    background-color: #FBF9F3;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+.contact-info-container {
+    background-color: #FBF9F3;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+/* Formulario mejorado */
+.form-control, .form-select {
+    border: 2px solid #FFE4E4;
+    border-radius: 15px;
+    padding: 15px 20px;
+    font-family: 'Grandstander', cursive;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #FA067C;
+    box-shadow: 0 0 0 0.25rem rgba(250, 6, 124, 0.25);
+}
+
+.form-label {
+    font-weight: bold;
+    color: #FA067C;
+    margin-bottom: 12px;
+    font-size: 1.2em;
+}
+
+.invalid-feedback {
+    color: #FA067C;
+    font-size: 0.9em;
+}
+
+/* Botón mejorado */
+.btn-pink {
+    background-color: #FA067C;
+    color: #FBF9F3;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: 'Grandstander', cursive;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn-pink:hover {
+    background-color: #D8006B;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(250, 6, 124, 0.3);
+}
+
+/* Tarjetas de información mejoradas */
+.contact-info-card {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #FFE4E4;
+}
+
+.contact-info-card:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.info-icon {
+    background-color: #FA067C;
+    color: #FBF9F3;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.info-content h3 {
+    color: #FA067C;
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+
+.info-content p {
+    color: #666;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.info-content small {
+    color: #999;
+    font-size: 0.9em;
+}
+
+/* Redes sociales mejoradas */
+.social-media {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.social-media h3 {
+    color: #FA067C;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    background-color: #FA067C;
+    color: #FBF9F3;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: #D8006B;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(250, 6, 124, 0.3);
+}
+
+/* Mapa mejorado */
+.map-section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.map-container {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 5px solid #FBF9F3;
+    height: 500px;
+}
+
+/* Modal de éxito */
+.success-icon {
+    color: #FA067C;
+    font-size: 4em;
+}
+
+.modal-content {
+    border-radius: 20px;
+    overflow: hidden;
+    border: none;
+}
+
+/* Footer */
+.footer {
+    background-color: #FA067C;
+    color: #FBF9F3;
+    padding: 40px 0 20px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-brand h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.footer-brand img {
+    width: 400px;
+    height: 400px;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    padding-bottom: 5px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    color: #FBF9F3;
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    color: #FFE4E4;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Grid mejorado para pantallas grandes */
+@media (min-width: 992px) {
+    .contact-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    
+    .contact-form-container,
+    .contact-info-container {
+        margin-bottom: 0;
+    }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 3em;
+    }
+    
+    .contact-subtitle {
+        font-size: 1.2em;
+    }
+    
+    .contact-form-container,
+    .contact-info-container {
+        padding: 30px;
+    }
+    
+    .map-container {
+        height: 350px;
+    }
+    
+    .info-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-title {
+        font-size: 2.5em;
+    }
+    
+    .contact-form-container,
+    .contact-info-container {
+        padding: 25px;
+    }
+    
+    .btn-pink {
+        padding: 12px 25px;
+    }
+    
+    .footer-brand img {
+        width: 300px;
+        height: 300px;
+    }
+}

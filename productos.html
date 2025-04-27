@@ -3,108 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heladería Deliciosa</title>
+    <title>NICECREAM - Heladería Artesanal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="productos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/productos.css">
 </head>
 <body>
+    <!-- Fondo animado con burbujas -->
+    <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/573229099680" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp whatsapp-icon"></i>
+    </a>
 
     <header class="site-header">
+        <div class="cloud-effect"></div>
         <nav class="navbar">
             <div class="navbar-content">
                 <div class="nav-links left-links">
-                    <a href="#">Inicio</a>
-                    <a href="#">Nosotros</a>
+                    <a href="inicio.html">Inicio</a>
+                    <a href="nosotros.html">Nosotros</a>
                 </div>
                 <div class="site-logo">
-                    <img src="logo.png" alt="Rainbow Ice Cream Logo">
+                    <div class="logo-glow"></div>
+                    <img src="img/logo.png" alt="NICECREAM Logo">
                 </div>
                 <div class="nav-links right-links">
-                    <a href="#">Productos</a>
-                    <a href="#">Contactanos</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="contactanos.html">Contactanos</a>
                 </div>
             </div>
         </nav>
     </header>
 
     <section class="products-section">
-        <h1>Nuestros Productos</h1>
-
+        <h1 class="main-title">Nuestros Productos</h1>
+    
         <div class="product-categories">
-
-            <div class="category-card">
-                <img src="canasta.png" alt="Conos y Canastas">
-                <h2>Conos y Canastas</h2>
-                <p>Disfruta de nuestros helados en crujientes conos o deliciosas canastas comestibles.</p>
-                <a href="#" class="details-link show-products-modal" data-bs-toggle="modal" data-bs-target="#productsModal" data-category="conos">
-                     <span class="arrow">→</span>
-                </a>
+            <!-- Primera fila -->
+            <div class="category-row first-row">
+                <div class="category-card" id="card-conos">
+                    <img src="img/conos_portada.png" alt="Conos">
+                    <h2>Conos</h2>
+                    <p>Disfruta de nuestros helados en crujientes conos artesanales.</p>
+                    <a href="#" class="details-link show-products-modal" data-bs-toggle="modal" data-bs-target="#productsModal" data-category="conos">
+                        <span class="btn-view-products">Ver Productos</span>
+                    </a>
+                </div>
+    
+                <div class="category-card" id="card-frutas">
+                    <img src="img/ensalada_frutasportada.png" alt="Ensaladas de Frutas">
+                    <h2>Ensaladas de Frutas</h2>
+                    <p>Frescas ensaladas con combinaciones especiales y sabores tropicales.</p>
+                    <a href="#" class="details-link show-products-modal" data-bs-toggle="modal" data-bs-target="#productsModal" data-category="frutas">
+                        <span class="btn-view-products">Ver Productos</span>
+                    </a>
+                </div>
+    
+                <div class="category-card" id="card-copas">
+                    <img src="img/copas_portada.png" alt="Copas de Helado">
+                    <h2>Copas Especiales</h2>
+                    <p>Nuestras creaciones únicas servidas en elegantes copas.</p>
+                    <a href="#" class="details-link show-products-modal" data-bs-toggle="modal" data-bs-target="#productsModal" data-category="copas">
+                        <span class="btn-view-products">Ver Productos</span>
+                    </a>
+                </div>
             </div>
-
-            <div class="category-card">
-                <img src="img/ensalada_frutas.png" alt="Ensaladas de Frutas y Más">
-                <h2>Ensaladas de Frutas, Canastas y Más</h2>
-                <p>Frescas ensaladas de frutas, combinaciones especiales y postres frutales.</p>
-                 <a href="#" class="details-link show-products-modal" data-bs-toggle="modal" data-bs-target="#productsModal" data-category="frutas">
-                     <span class="arrow">→</span>
-                </a>
+    
+            <!-- Segunda fila -->
+            <div class="category-row second-row">
+                <div class="category-card" id="card-canastas">
+                    <img src="img/canasta.png" alt="Canastas">
+                    <h2>Canastas</h2>
+                    <p>Deliciosas combinaciones en canastas con toppings especiales.</p>
+                    <a href="#" class="details-link show-products-modal" data-bs-toggle="modal" data-bs-target="#productsModal" data-category="canastas">
+                        <span class="btn-view-products">Ver Productos</span>
+                    </a>
+                </div>
+    
+                <div class="category-card" id="card-malteadas">
+                    <img src="img/malteada_portada.png" alt="Malteadas">
+                    <h2>Malteadas</h2>
+                    <p>Deliciosos batidos de helado con tus sabores favoritos.</p>
+                    <a href="#" class="details-link show-products-modal" data-bs-toggle="modal" data-bs-target="#productsModal" data-category="malteadas">
+                        <span class="btn-view-products">Ver Productos</span>
+                    </a>
+                </div>
+    
+                <div class="category-card" id="card-kids">
+                    <img src="img/kids_portada.png" alt="Productos para Niños">
+                    <h2>Para Niños</h2>
+                    <p>Opciones divertidas diseñadas especialmente para los más pequeños.</p>
+                    <a href="#" class="details-link show-products-modal" data-bs-toggle="modal" data-bs-target="#productsModal" data-category="kids">
+                        <span class="btn-view-products">Ver Productos</span>
+                    </a>
+                </div>
             </div>
-
-            <div class="category-card">
-                <img src="img/copas.png" alt="Copas de Helado">
-                <h2>Copas Especiales</h2>
-                <p>Nuestras creaciones únicas servidas en elegantes copas.</p>
-                 <a href="#" class="details-link show-products-modal" data-bs-toggle="modal" data-bs-target="#productsModal" data-category="copas">
-                     <span class="arrow">→</span>
-                </a>
-            </div>
-
-             <div class="category-card">
-                 <img src="img/malteadas.png" alt="Malteadas">
-                <h2>Malteadas</h2>
-                <p>Deliciosos batidos de helado con tus sabores y toppings favoritos.</p>
-                 <a href="#" class="details-link show-products-modal" data-bs-toggle="modal" data-bs-target="#productsModal" data-category="malteadas">
-                     <span class="arrow">→</span>
-                </a>
-            </div>
-
-             <div class="category-card">
-                 <img src="img/kids.png" alt="Productos para Niños">
-                <h2>Para los Más Pequeños (Kids)</h2>
-                <p>Opciones divertidas y deliciosas diseñadas especialmente para niños.</p>
-                 <a href="#" class="details-link show-products-modal" data-bs-toggle="modal" data-bs-target="#productsModal" data-category="kids">
-                     <span class="arrow">→</span>
-                </a>
-            </div>
-
         </div>
-
-
     </section>
 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>NICECREAM</h3>
+                    <p>Más de 5 años endulzando tus momentos</p>
+                    <img src="img/logo_blanco.png" alt="">
+                </div>
+                
+                <div class="footer-info">
+                    <div class="footer-section">
+                        <h4>Ubicación</h4>
+                        <p>Juncal - Palermo</p>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Horario</h4>
+                        <p>2:00 PM a 10:00 PM</p>
+                        <p>Viernes a Lunes</p>
+                        <p>No se realizan domicilios</p>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Contacto</h4>
+                        <p>322 9099680</p>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/nicecream_juncal?igsh=ZTExajdjeGNuaXhi" target="_blank">
+                                <i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/share/1AuFQeqpRB/?mibextid=wwXIfr" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                      
+            <div class="footer-copyright">
+                <p>&copy; 2025 NICECREAM. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de productos -->
     <div class="modal fade" id="productsModal" tabindex="-1" aria-labelledby="productsModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="productsModalLabel">Productos de la Categoría</h5>
+                    <h5 class="modal-title" id="productsModalLabel">Productos</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div id="product-list-container">
-                        </div>
+                    <div id="product-list-container"></div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-pink" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="prodcutos.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/productos.js"></script>
 </body>
 </html>
